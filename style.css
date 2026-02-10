@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: monospace;
+    line-height: 1.5;
+}
+
+.section{
+    padding: 80px 10%;
+}
+
+h2{
+   margin-bottom: 20px; 
+}
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.hero-content{
+    text-align: center;
+}
+
+.nav-links{
+    display: flex;
+    gap: 20px
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    text-decoration: none;
+}
