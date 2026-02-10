@@ -1,3 +1,9 @@
+:root {
+  --text: #111;
+  --muted: #666;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -7,10 +13,11 @@
 body{
     font-family: monospace;
     line-height: 1.5;
+    color: var(--text);
 }
 
 .section{
-    padding: 80px 10%;
+    padding: 80px 0;
 }
 
 h2{
@@ -27,6 +34,27 @@ h2{
     text-align: center;
 }
 
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 48px;
+}
+
+.hero p {
+  margin: 15px 0 30px;
+  color: #555;
+}
+
+
 .nav-links{
     display: flex;
     gap: 20px
@@ -36,10 +64,42 @@ html{
     scroll-behavior: smooth;
 }
 
-.btn{
-    display: inline-block;
-    padding: 10px 20px;
-    background: black;
-    color: white;
-    text-decoration: none;
+.btn {
+  padding: 12px 24px;
+  border-radius: 6px;
+  background: #000;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.skills-list {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.skills-list li {
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.project-card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 24px;
 }
