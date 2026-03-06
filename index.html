@@ -1,114 +1,334 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jabed — ML Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Jabed – Aspiring Machine Learning Engineer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,600&family=Epilogue:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ── HEADER / HERO ──────────────────────────── -->
+    <header id="home" class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">Jabed<span>.</span></a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="blog.html" class="nav-blog-btn">Blog</a></li>
+        </ul>
+      </nav>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio of Jabed - Aspiring Machine Learning Engineer</title>
-    <meta name="description" content="Portfolio of Jabed – Aspiring Machine Learning Engineer" />
-    <link rel="stylesheet" href="style.css">
-
-
-</head>
-<body>
-
-    <header id="home" class="hero">
-        <nav class="navbar">
-            <h1 class="logo">Jabed</h1>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-
-
-        <div class="hero-content">
-            <h2>Hi, I'm Jabed</h2>
-            <p>Aspiring Machine Learning Engineer</p>
+      <div class="hero-grid">
+        <!-- LEFT: text -->
+        <div class="hero-text">
+          <span class="hero-eyebrow">Portfolio — 2026</span>
+          <h1 class="hero-name">
+            Aspiring<br />
+            <em>ML</em><br />
+            Engineer
+          </h1>
+          <p class="hero-role">
+            Hi, I'm Jabed. I build things at the intersection of data and
+            software — from experiment trackers to intelligent systems.
+          </p>
+          <div class="hero-actions">
             <a href="#projects" class="btn">View Projects</a>
+            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+          </div>
         </div>
+
+        <!-- RIGHT: blob photo -->
+        <div class="hero-blob-wrap">
+          <div class="blob-frame">
+            <img class="blob-img" src="photo.jpg" alt="Jabed" />
+            <div class="blob-ring"></div>
+            <div class="blob-ring-2"></div>
+          </div>
+        </div>
+      </div>
     </header>
 
-
     <main class="container">
-        <section id="about" class="section">
-            <h2>About Me</h2>
+      <!-- ── ABOUT ─────────────────────────────────── -->
+      <section id="about" class="section">
+        <span class="section-label">[ 00 ] — About</span>
+        <div class="about-grid">
+          <div class="about-body">
+            <h2>Building at the edge of data &amp; software</h2>
             <p>
-                I'm an aspiring Machine Learning Engineer focused on building strong foundations in Python, ML and AI. 
+              I'm an aspiring Machine Learning Engineer with a focus on building
+              reliable, production-ready systems. I care about understanding how
+              things work end-to-end — from raw data pipelines to model
+              deployment.
             </p>
-        </section>
-
-
-         <section id="skills" class="section">
-            <h2>Skills</h2>
-
-            <ul class="skills-list">
-                <li>Python</li>
-                <li>SQL</li>
-                <li>NumPy, Pandas</li>
-                <li>Matplotlib, Seasborn</li>
-                <li>SciKitLearn</li>
-            </ul>
-        </section>
-
-
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-
-            <div class="projects-grid">
-
-                <div class="project-card">
-                    <h3>Convergence</h3>
-                    <p>A Backend First ML Experiment Tracker. </p>
-                    <a href="#">Github</a>
-                </div>
-
-                <div class="project-card">
-                    <h3>Sorting Hat</h3>
-                    <p>Inspired from Hogwarts Sorting Hat.<br>Sort Yourself into One of these Magical House. </p>
-                    <a href="#">Github</a>
-                </div>
-
-                <div class="project-card">
-                    <h3>LocalMart</h3>
-                    <p>Minimal Ecommerce Website with HTML, CSS and Vanilla JS</p>
-                    <a href="#">Github</a>
-                </div>
+            <p>
+              Currently deepening my foundations in Python, classical ML, and
+              data engineering. I write about what I learn on my blog — mostly
+              practical notes, experiments, and occasional opinions.
+            </p>
+            <div style="margin-top: 20px">
+              <a href="blog.html" class="btn btn-ghost">Read the Blog →</a>
             </div>
-        </section>
+          </div>
+          <div class="about-sidebar">
+            <div class="about-stat">
+              <div class="about-stat-num">3+</div>
+              <div class="about-stat-label">Projects shipped</div>
+            </div>
+            <div class="about-stat">
+              <div class="about-stat-num">6</div>
+              <div class="about-stat-label">Core ML tools</div>
+            </div>
+            <div class="about-stat">
+              <div class="about-stat-num">∞</div>
+              <div class="about-stat-label">Curiosity</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- ── SKILLS CLOUD ───────────────────────────── -->
+      <section id="skills" class="section">
+        <span class="section-label">[ 01 ] — Skills</span>
+        <h2>What I work with</h2>
+        <div class="skills-cloud">
+          <div class="skill-item sz-xl">
+            <span class="skill-name">Python</span>
+            <span class="skill-desc"
+              >ML pipelines, scripting, automation &amp; data wrangling</span
+            >
+          </div>
 
-        <section id="contact" class="section">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" required></textarea>
-                <button type="submit">Send!</button>
-            </form>
+          <div class="skill-item sz-md">
+            <span class="skill-name">SQL</span>
+            <span class="skill-desc"
+              >Queries, aggregations, data exploration</span
+            >
+          </div>
 
+          <div class="skill-item sz-lg">
+            <span class="skill-name">NumPy</span>
+            <span class="skill-desc"
+              >Numerical computing, array operations</span
+            >
+          </div>
+
+          <div class="skill-item sz-sm">
+            <span class="skill-name">Matplotlib</span>
+            <span class="skill-desc">Data visualization</span>
+          </div>
+
+          <div class="skill-item sz-lg">
+            <span class="skill-name">Pandas</span>
+            <span class="skill-desc">Data manipulation &amp; analysis</span>
+          </div>
+
+          <div class="skill-item sz-xl">
+            <span class="skill-name">Scikit-Learn</span>
+            <span class="skill-desc"
+              >Classical ML — regression, classification, clustering</span
+            >
+          </div>
+
+          <div class="skill-item sz-sm">
+            <span class="skill-name">Seaborn</span>
+            <span class="skill-desc">Statistical data visualization</span>
+          </div>
+
+          <div class="skill-item sz-md">
+            <span class="skill-name">Git</span>
+            <span class="skill-desc">Version control, collaboration</span>
+          </div>
+
+          <div class="skill-item sz-sm">
+            <span class="skill-name">HTML / CSS</span>
+            <span class="skill-desc">This site, for starters</span>
+          </div>
+
+          <div class="skill-item sz-xl">
+            <span class="skill-name">Pytorch</span>
+            <span class="skill-desc">Oh, for dethroning Tensorflow</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── PROJECTS ───────────────────────────────── -->
+      <section id="projects" class="section">
+        <span class="section-label">[ 02 ] — Work</span>
+        <h2>Projects</h2>
+
+        <div class="projects-list">
+          <div class="project-entry tilt-card">
+            <div class="project-meta">
+              <span class="project-code">[ WEB-02 ] — 2026</span>
+              <h3>Sprout [LOADING...]</h3>
+              <p class="project-desc">
+                A two-sided daily growth tracker for kids and guardians.
+                Children check off tasks, earn points, and chase rewards.
+                Guardians configure, monitor, and get weekly reports.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">React</span>
+                <span class="stack-tag">FastAPI</span>
+                <span class="stack-tag">PostgreSQL</span>
+                <span class="stack-tag">Tailwind</span>
+              </div>
+              <a
+                href="https://github.com/mkjabed/Sprout"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link"
+                >Github</a
+              >
+            </div>
+            <span class="project-number">02</span>
+          </div>
+
+          <div class="project-entry tilt-card">
+            <div class="project-meta">
+              <span class="project-code">[ ML-01 ] — 2026</span>
+              <h3>Convergence [LOADING...]</h3>
+              <p class="project-desc">
+                A backend-first ML experiment tracker. Log runs, compare
+                metrics, and track hyperparameters without a bloated UI getting
+                in the way.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">Python</span>
+                <span class="stack-tag">FastAPI</span>
+                <span class="stack-tag">SQLite</span>
+              </div>
+              <a
+                href="https://github.com/mkjabed/Convergence"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link"
+                >Github</a
+              >
+            </div>
+            <span class="project-number">01</span>
+          </div>
+
+          <div class="project-entry tilt-card">
+            <div class="project-meta">
+              <span class="project-code">[ JAVA-01 ] — 2025</span>
+              <h3>Sorting Hat</h3>
+              <p class="project-desc">
+                Inspired by the Hogwarts Sorting Hat — a personality quiz that
+                classifies you into one of the four magical houses using a
+                trained classifier.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">Jave</span>
+                <span class="stack-tag">Java Swing</span>
+              </div>
+              <a
+                href="https://github.com/mkjabed/Sorting-Hat"
+                target="_blank rel="
+                noopener
+                noreferrer
+                class="project-link"
+                >Github</a
+              >
+            </div>
+            <span class="project-number">02</span>
+          </div>
+
+          <div class="project-entry tilt-card">
+            <div class="project-meta">
+              <span class="project-code">[ WEB-01 ] — 2025</span>
+              <h3>LocalMart</h3>
+              <p class="project-desc">
+                A minimal e-commerce frontend — product listings, cart, checkout
+                flow. Built as a pure HTML/CSS/JS exercise with no frameworks.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">HTML</span>
+                <span class="stack-tag">CSS</span>
+                <span class="stack-tag">Vanilla JS</span>
+                <span class="stack-tag">MySQL</span>
+              </div>
+              <a
+                href="https://github.com/mkjabed/LocalMart "
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link"
+                >Github</a
+              >
+            </div>
+            <span class="project-number">03</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── CONTACT ────────────────────────────────── -->
+      <section id="contact" class="section">
+        <span class="section-label">[ 03 ] — Contact</span>
+        <div class="contact-grid">
+          <div class="contact-intro">
+            <h2>Let's talk</h2>
+            <p>
+              Collaborations, questions, or just want to say hello — my inbox is
+              open.
+            </p>
             <div class="social-links">
-                <a href="#">Github</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">Email</a>
+              <a
+                href="https://github.com/mkjabed"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Github <span class="social-link-arrow">↗</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mustofa-kamal-jabed-66a480200/"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn <span class="social-link-arrow">↗</span>
+              </a>
+              <a
+                href="mailto:jabed.mu.cse@gmail.com"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Email <span class="social-link-arrow">↗</span>
+              </a>
             </div>
-        </section>
+          </div>
 
+          <form id="contact-form">
+            <input type="text" placeholder="Name" required />
+            <input type="email" placeholder="Email" required />
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit" class="btn">Send message</button>
+          </form>
+        </div>
+      </section>
     </main>
 
-
-
-    <footer class="footer">
-        <p>© 2026 Jabed. Bulit with Curiosity!</p>
+    <footer class="footer container">
+      <p>© 2026 Jabed — Built with curiosity.</p>
+      <div class="footer-links">
+        <a href="blog.html">Blog</a>
+        <a href="#home">Back to top ↑</a>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-
-</body>
+  </body>
 </html>

@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ERROR!! HTTP Status Code — Jabed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,600&family=Epilogue:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .status-block {
+        border-left: 2px solid var(--rule);
+        padding: 18px 22px;
+        margin: var(--space-md) 0;
+        background: var(--bg-raised);
+        border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        transition: border-left-color var(--transition);
+      }
+      .status-block:hover {
+        border-left-color: var(--gray);
+      }
+      .status-code {
+        font-family: var(--font-mono);
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: var(--text);
+        letter-spacing: 0.06em;
+        display: block;
+        margin-bottom: 8px;
+      }
+      .status-block p {
+        margin-bottom: 0;
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- ── NAV ──────────────────────────────────── -->
+      <nav class="navbar">
+        <a href="index.html" class="logo">Jabed<span>.</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="blog.html" class="nav-blog-btn">Blog</a></li>
+        </ul>
+      </nav>
+
+      <!-- ── POST HEADER ───────────────────────────── -->
+      <div class="post-header">
+        <a href="blog.html" class="post-nav">Back to Blog</a>
+        <div class="post-header-meta">
+          <span class="blog-tag">Concepts</span>
+          <span class="blog-date">December 2020</span>
+          <span class="blog-read-time">5 min read</span>
+        </div>
+        <h1>ERROR!!</h1>
+        <p class="post-subtitle">HTTP Status Code — সার্ভারের বাড়িতে দাওয়াত!</p>
+      </div>
+
+      <!-- ── POST BODY ─────────────────────────────── -->
+      <article class="post-body">
+        <p>
+          মনে করুন, আপনি আপনার বন্ধুর বাড়িতে ভুরিভোজে যাবেন। একা যাবেন না, সাথে
+          নিউলি ম্যারিড ওয়াইফকেও নিয়ে যাবেন। তো গিয়ে কলিংবেল বাজালেন, বেচারা
+          বন্ধু দরজা একটুখানি ফাঁক করল। তারপর আপনার চাঁদ মুখখানা দেখতেই দড়াম
+          করে মুখের ওপর দরজা বন্ধ করে দিল!
+        </p>
+
+        <p>
+          নতুন বউয়ের সামনে ইজ্জতের ফালুদা! এটা কি ঠিক হলো? 😐 একদম না — পত্রপাঠ
+          বিদায়ের কারণটা তো অন্তত বলা উচিত।
+        </p>
+
+        <p>
+          ভাগ্যিস IANA (Internet Assigned Numbers Authority) আছে। নইলে কোনো সাইট
+          ভিজিট করতে গিয়ে আমাদেরও এরকম বিনা নোটিশে পরোক্ষ 'গেট লস্ট'-এর সামনে
+          পড়তে হতো।
+        </p>
+
+        <p>
+          আমরা যখন ক্লায়েন্ট হিসেবে কোনো সার্ভারে দাওয়াত খেতে যাই তখন সার্ভার
+          যে রেসপন্স করে সেটাই হলো <strong>HTTP Status Code</strong>। আর ওই
+          IANA-এর কাজই হলো এটার রেজিস্ট্রি দেখা।
+        </p>
+
+        <p>
+          স্ট্যাটাস কোডের রেসপন্সের ওপর ভিত্তি করে তাকে ৫ ভাগে ভাগ করা হয়েছে।
+          আর কোডের আছে দুটো অংশ — প্রথম ডিজিট দিয়ে কোন ধরনের রেসপন্স সেই ক্লাস
+          বোঝায়, আর দ্বিতীয় ও তৃতীয়টা দিয়ে তেমন কিছুই বোঝায় না। 😪
+        </p>
+
+        <h2>৫টা ক্লাস কী কী?</h2>
+
+        <div class="status-block">
+          <span class="status-code">1xx — Informational</span>
+          <p>
+            ইনফরমেশনাল রেসপন্স দিয়ে বোঝায় সার্ভার রিকোয়েস্ট রিসিভ করেছে,
+            পুরোদস্তুর বুঝতেও পেরেছে। কিন্তু কোনো কারণে এটার প্রগ্রেস পুরো শেষ
+            হয়নি। কোনো সমস্যা না — জাস্ট একটা এক্সট্রা ইনফরমেশন:
+            <em>Everything so far is OK.</em>
+          </p>
+        </div>
+
+        <div class="status-block">
+          <span class="status-code">2xx — Successful</span>
+          <p>
+            এইটা হলো জলপাই পাতার মতো সবচেয়ে শান্তিপূর্ণ রেসপন্স। রিকোয়েস্ট
+            রিসিভড, আন্ডারস্টুড এন্ড অ্যাক্সেপ্টেড! নরমালি সাইট ভিজিটিংয়ের
+            ক্ষেত্রে এটাই হয়। সো চিল!
+          </p>
+        </div>
+
+        <div class="status-block">
+          <span class="status-code">3xx — Redirection</span>
+          <p>
+            আপাতত সবকিছুই ঠিক আছে। তবে খালাবাড়ি যাওয়ার পর আপনাকে সহ প্যাক করে
+            নানাবাড়ি যাওয়ার মতো অবস্থা সৃষ্টি হওয়ার সমূহ সম্ভাবনা। একটা সাইট
+            থেকে যে আরেকটা সাইটে রিডিরেক্ট — এটাই সেই কালপ্রিট।
+          </p>
+        </div>
+
+        <div class="status-block">
+          <span class="status-code">4xx — Client Error</span>
+          <p>
+            ক্লায়েন্ট এররের ক্ষেত্রে যত প্রকার অপকর্ম সাধিত হইয়াছে সবকিছুতে
+            শুধু আপনারই অবদান থাকিবে। সার্ভার আঙ্কেলের এখানে কোনো দোষ নেই। এটা
+            হতে পারে রং ইউআরএলের কারণে কিংবা অ্যাক্সেস নিয়ে জটিলতার কারণে।
+          </p>
+        </div>
+
+        <div class="status-block">
+          <span class="status-code">5xx — Server Error</span>
+          <p>
+            এই ক্ষেত্রে সব দায়ভার সার্ভারের ওপরই ন্যস্ত। হয় সে জানে যে তার
+            পেটে কোনো গন্ডগোল হয়েছে, নয়তো সে রিকোয়েস্ট ফুলফিল করার ক্ষ্যামতাই
+            রাখে না। এটা পারমানেন্ট বা টেম্পোরারি — দুরকমই হতে পারে।
+          </p>
+        </div>
+
+        <blockquote>
+          <p>
+            ১ থেকে ৩ পর্যন্ত রেসপন্সে কোনো সমস্যা হয় না — এগুলোর কাহিনি আমরা
+            ঘূর্ণাক্ষরে টেরও পাই না। সমস্যা দেখা দেয় ৪ আর ৫-এর ক্ষেত্রে।
+          </p>
+        </blockquote>
+
+        <h2>কমন স্ট্যাটাস কোডগুলো</h2>
+
+        <div class="status-block">
+          <span class="status-code">100 — Continue</span>
+          <p>
+            নাম দেখেই বোঝা যাচ্ছে চালিয়ে যেতে হবে। সবকিছু ঠিক আছে — রিসিভড এন্ড
+            আন্ডারস্টুড। ক্যানসেল না করে জাস্ট গো অন।
+          </p>
+        </div>
+
+        <div class="status-block">
+          <span class="status-code">200 — OK</span>
+          <p>
+            OK means Objection Killed! So, everything is okay, na? Yep. 😌 আমরা
+            প্রতিদিন হাজারবার সাইট ভিজিটের সময় যে রেসপন্সের সম্মুখীন হই এটাই
+            সেটা।
+          </p>
+        </div>
+
+        <div class="status-block">
+          <span class="status-code">300 — Multiple Choice</span>
+          <p>
+            বহুনির্বাচনী প্রশ্নের কথা মনে পড়ল? 🤔 না, এটা সেটা না। ৩xx ক্লাসের
+            কাজ ছিল রিডিরেক্ট করা — এটা মাল্টিপল চয়েসের মাধ্যমে রিডিরেক্ট করে।
+            উদাহরণ? ভিডিও ডাউনলোডে যে বিভিন্ন ফরম্যাট চুজ করার অপশন দেয়, সেটা।
+          </p>
+        </div>
+
+        <div class="status-block">
+          <span class="status-code">301 — Moved Permanently</span>
+          <p>
+            যে রিসোর্স চাওয়া হয়েছে সেটা পারমানেন্টলি সরিয়ে নেওয়া হয়েছে।
+            রেসপন্স হিসেবে নতুন ইউআরএল দেওয়া হয়।
+          </p>
+        </div>
+
+        <div class="status-block">
+          <span class="status-code">400 — Bad Request</span>
+          <p>
+            খারাপ অনুরোধ! বড়ো ফাইল আপলোড করলে যেটা সাইট প্রপারলি হ্যান্ডেল করতে
+            পারছে না, ইনভ্যালিড কুকিজ ইউজ করলে, কিংবা ডোমেইনের পরের অংশে সমস্যা
+            থাকলে এটা দেখায়।
+          </p>
+        </div>
+
+        <div class="status-block">
+          <span class="status-code">401 — Unauthorized</span>
+          <p>
+            রিসোর্স রিকোয়েস্টের ক্ষেত্রে অথেন্টিকেট করতে যখন ফেইল হয় কিংবা
+            সেটা করাই হয় না তখন দেখায়। অথেন্টিকেট বলতে ইউজারনেম, পাসওয়ার্ড
+            দিয়ে নিজের পরিচয় প্রতিষ্ঠা করা। 😇
+          </p>
+        </div>
+
+        <div class="status-block">
+          <span class="status-code">403 — Forbidden</span>
+          <p>
+            নিষিদ্ধ মিনস নিষিদ্ধ! 401-এর সাথে পার্থক্য হলো — ওইটাতে অথেন্টিকেট
+            করলে অ্যাক্সেস পাওয়া যায়, এইটায় হাতে-পায়ে ধরলেও পাওয়া যায় না।
+            😪 কী নিষ্ঠুর!
+          </p>
+        </div>
+
+        <div class="status-block">
+          <span class="status-code">404 — Not Found</span>
+          <p>
+            ইন্টারনেটে সবচেয়ে কমন এরর। ইউআরএলে ভুল থাকলে এটা দেখায়। প্রায়ই যে
+            বলা হয় ব্রোকেন লিঙ্ক, ডেড লিঙ্ক — এই হলো তার মূল হোতা। তবে 403-এর
+            ফরবিডেন সাইট যদি নিজের অস্তিত্ব লুকিয়ে রাখতে চায় তখন গিরগিটির মতো
+            রং বদলে এটা শো করে।
+          </p>
+        </div>
+
+        <div class="status-block">
+          <span class="status-code">418 — I'm a teapot</span>
+          <p>যখন সার্ভার টি পট থেকে চা দিতে চায় না তখন এই এরর দেখায়! 😶</p>
+        </div>
+
+        <div class="status-block">
+          <span class="status-code">500 — Internal Server Error</span>
+          <p>
+            যখন সার্ভারে অভ্যন্তরীণ কোনো সমস্যা দেখা দেয় তখন এই এরর শো করে। এই
+            অবস্থায় থার্ড পার্টি প্লাগ-ইনের সাহায্য ছাড়া বেচারা রেসপন্স করতে
+            পারে না।
+          </p>
+        </div>
+
+        <hr />
+
+        <h2>For curious minds</h2>
+
+        <ul>
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
+              target="_blank"
+              >MDN Web Docs — HTTP Status Codes</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://en.m.wikipedia.org/wiki/List_of_HTTP_status_codes"
+              target="_blank"
+              >Wikipedia — List of HTTP Status Codes</a
+            >
+          </li>
+          <li>
+            <a href="https://kinsta.com/blog/http-status-codes/" target="_blank"
+              >Kinsta — HTTP Status Codes Explained</a
+            >
+          </li>
+          <li>
+            <a href="https://httpstatuses.com/" target="_blank"
+              >httpstatuses.com</a
+            >
+          </li>
+        </ul>
+        <a href="https://youtu.be/tMoW5G5LU08" target="_blank"
+          >Soon you'll get better 🎬</a
+        >
+      </article>
+    </div>
+
+    <footer class="footer container">
+      <p>© 2026 Jabed — Built with curiosity.</p>
+      <div class="footer-links">
+        <a href="blog.html">← All posts</a>
+        <a href="index.html">Home</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
