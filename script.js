@@ -10,7 +10,7 @@ if (form) {
       headers: { Accept: "application/json" },
     });
 
-    console.log(res.status, data);
+    // console.log(res.status, data);
     // const res = { ok: true }; // fake a success
 
     if (res.ok) {
