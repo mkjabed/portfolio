@@ -4,12 +4,13 @@ if (form) {
     e.preventDefault();
     const btn = form.querySelector("button");
 
-    const res = await fetch("https://formspree.io/f/xqeykyazee", {
+    const res = await fetch("https://formspree.io/f/xqeykyaz", {
       method: "POST",
       body: new FormData(form),
       headers: { Accept: "application/json" },
     });
 
+    console.log(res.status, data);
     // const res = { ok: true }; // fake a success
 
     if (res.ok) {
